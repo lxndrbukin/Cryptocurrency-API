@@ -27,11 +27,7 @@ const fetchCrypto = async () => {
         subNameOne.textContent = crypto.name;
         subNameTwo.textContent = crypto.symbol;
         
-        const fetchPrice = () => {
-            priceSumDiv.textContent = (Math.round(crypto.priceUsd * 100) / 100).toFixed(2);
-        }
-        fetchPrice();
-        setInterval(fetchPrice, 10000);
+        priceSumDiv.textContent = crypto.priceUsd > 0.001 ? (Math.round(crypto.priceUsd * 100) / 100).toFixed(2) : crypto.priceUsd;
 
         nameDiv.appendChild(subNameOne);
         nameDiv.appendChild(subNameTwo);
@@ -50,4 +46,3 @@ const container = document.querySelector("#container");
 
 
 fetchCrypto();
-setInterval(fetchCrypto, 10000);

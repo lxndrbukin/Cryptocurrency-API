@@ -21,5 +21,5 @@ io.on('connection', socket => {
     }, 10000);
 });
 
-const PORT = 5000 || process.env.PORT;
+const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => console.log(`SERVER IS RUNNING ON PORT ${PORT}`));

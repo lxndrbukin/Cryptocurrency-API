@@ -3,7 +3,7 @@ let crypto = [];
 let newCrypto = [];
 
 const fetchData = async () => {
-    const res = await fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,ETH,DOGE&tsyms=USD,GBP,EUR', {
+    const res = await fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,ETH,DOGE,ADA,SOL,DOT&tsyms=USD,GBP,EUR', {
         header: {
             Apikey: '9afcd29a4fca111df75fcbb216f9b41cb9eb401fc7d17197c8a6a68b762b024f'
         }
